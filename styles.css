@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px, 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: gold;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover:after {
+    width: 100%;
+}
+
+.hamburger {
+    color: black;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.home {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 0;
+    padding: 100px 8% 120px;
+}
+
+.home-content {
+    flex: 1 1 400px;
+}
+
+.home .img {
+    flex: 1 1 150px;
+}
+
+.home .img img {
+    width: 100%;
+    box-shadow: 0px 15px 12px -10px black;
+    background: gold;
+    border-radius: 290px;
+}
+
+.home-content h3 {
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.home-content h3 span {
+    color: gold;
+    text-shadow: 0px 1px 1px black;
+}
+
+.home-content h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.home-content p {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+#btn {
+    width: 150px;
+    height: 38px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: gold;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#btn:hover {
+    width: 175px;
+}
+
+@media screen and (max-width:1243) {
+    .home {
+        padding: 50px 5% 120px;
+    }
+}
+
+@media (max-width:660px) {
+    .home-content h3 {
+        font-size: 25px;
+    }
+
+    .home-content h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width:597px) {
+    .home {
+        text-align: center;
+    }
+}
+
+.products {
+    padding: 100px 8% 120px;
+}
+
+.main-text {
+    text-align: center;
+}
+
+.main-text h3 {
+    font-size: 36px;
+    font-weight: 600;
+    color: black;
+    text-shadow: 0px 1px 1px black;
+}
+
+.card-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    text-align: center;
+    gap: 0.90rem;
+    margin-top: 30px;
+}
+
+.card-content .row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.row img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-body h3 {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 500;
+    color: black;
+    text-shadow: 0px 1px 1px black;
+}
+
+.rating i {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.checked {
+    color: gold;
+}
+
+.card-body p {
+    font-weight: 500;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+.price {
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.card-body button {
+    width: 130px;
+    height: 30px;
+    font-weight: 550;
+    margin-top: 10px;
+    background: gold;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.card-body button:hover {
+    width: 150px;
+}
+
+@media (max-width:920px) {
+    .card-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+#footer {
+    width: 100%;
+    background: #f9f9f9;
+}
+
+.footer-content {
+    text-align: center;
+    padding-top: 5%;
+}
+
+.footer-content .logo h3 {
+    font-size: 32px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+}
+
+.footer-content .logo h3 span {
+    color: gold;
+}
+
+.footer-content p {
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+.socail-links i {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.socail-links i:hover {
+    background: gold;
+}
+
+.footer-bottom-content {
+    text-align: center;
+}
+
+.footer-bottom-content p {
+    font-size: 17px;
+    font-weight: 550;
+}
+
+.footer-bottom-content p a {
+    color: gold;
+    font-weight: 600;
+}
